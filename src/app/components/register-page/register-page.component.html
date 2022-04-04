@@ -27,6 +27,7 @@
             </mat-form-field>
             <div *ngIf='registerForm.controls["pswConfirm"].touched && registerForm.controls["pswConfirm"].invalid'>
                 <mat-error *ngIf="registerForm.controls['pswConfirm'].errors && registerForm.controls['pswConfirm'].errors['required']">Password obbligatoria</mat-error>
+                <mat-error *ngIf="registerForm.controls['pswConfirm'].errors && registerForm.controls['pswConfirm'].errors['hasExclamationMark']">Password obbligatoria</mat-error>
             </div>
 
             <mat-form-field appearance="outline">
